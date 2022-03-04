@@ -1,197 +1,84 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/Features/DataTable.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/Features/TagsDemo.feature");
 formatter.feature({
-  "name": "Test the login functionality of OrangeHRM using DataTable",
+  "name": "Using of tags in Cucumber",
   "description": "",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "name": "Test the valid login using DataTable",
-  "description": "",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "name": "user is on login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_is_on_login_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters credentials using DataTable",
-  "rows": [
-    {}
-  ],
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_enters_credentials_using_DataTable(io.cucumber.datatable.DataTable)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "click on login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.click_on_login_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should land on home page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_should_land_on_home_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.uri("file:src/test/resources/Features/LoginFeature.feature");
-formatter.feature({
-  "name": "Test the login functionality of OrangeHRM",
-  "description": "",
-  "keyword": "Feature"
-});
-formatter.scenarioOutline({
-  "name": "Test the valid login",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "user is on login page",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "user enters \u003cusername\u003e and \u003cpassword\u003e",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "click on login button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user should land on home page",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
+  "keyword": "Feature",
+  "tags": [
     {
-      "cells": [
-        "username",
-        "password"
-      ]
-    },
-    {
-      "cells": [
-        "admin",
-        "admin123"
-      ]
-    },
-    {
-      "cells": [
-        "admin1",
-        "admin1234"
-      ]
+      "name": "@FunctionalTest"
     }
   ]
 });
 formatter.scenario({
-  "name": "Test the valid login",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "user is on login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_is_on_login_page()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user enters admin and admin123",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_enters_username_and_password(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "click on login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.click_on_login_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should land on home page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_should_land_on_home_page()"
-});
-formatter.result({
-  "status": "passed"
+  "name": "Scenario1",
+  "description": "    Given: This is Scenario1",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    },
+    {
+      "name": "@SmokeTest"
+    }
+  ]
 });
 formatter.scenario({
-  "name": "Test the valid login",
-  "description": "",
-  "keyword": "Scenario Outline"
+  "name": "Scenario2",
+  "description": "    Given: This is Scenario2",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    },
+    {
+      "name": "@SmokeTest"
+    }
+  ]
 });
-formatter.step({
-  "name": "user is on login page",
-  "keyword": "Given "
+formatter.scenario({
+  "name": "Scenario3",
+  "description": "    Given: This is Scenario3",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    },
+    {
+      "name": "@SanityTest"
+    },
+    {
+      "name": "@SmokeTest"
+    }
+  ]
 });
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_is_on_login_page()"
+formatter.scenario({
+  "name": "Scenario4",
+  "description": "    Given: This is Scenario4",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    }
+  ]
 });
-formatter.result({
-  "status": "passed"
+formatter.scenario({
+  "name": "Scenario5",
+  "description": "    Given: This is Scenario5",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    }
+  ]
 });
-formatter.step({
-  "name": "user enters admin1 and admin1234",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_enters_username_and_password(java.lang.String,java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "click on login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.click_on_login_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should land on home page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_should_land_on_home_page()"
-});
-formatter.result({
-  "status": "passed"
+formatter.scenario({
+  "name": "Scenario6",
+  "description": "    Given: This is Scenario6",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    }
+  ]
 });
 });

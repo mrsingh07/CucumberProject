@@ -6,13 +6,15 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/resources/Features", 
+@CucumberOptions(features="src\\test\\resources\\Features", 
 				 glue= {"com.stepDefinition"}, 
 				 monochrome=true,
 				 plugin= {"html:Reports\\HtmlReport", "json:Reports\\JsonReport\\cucumber.json", "junit:Reports\\JunitReport\\cucumber.xml"},
-				 dryRun=false,	//Mapping between feature file and step file
-				 strict=true	//It will check if any step is not defined in the step definition file
+				 dryRun=true,	//Mapping between feature file and step file
+				 strict=true,	//It will check if any step is not defined in the step definition file
+				 tags= {"@FunctionalTest"}
 				)
+
 public class Runner {
 
 }
