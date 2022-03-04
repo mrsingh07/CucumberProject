@@ -10,8 +10,8 @@ import io.cucumber.junit.CucumberOptions;
 				 glue= {"com.stepDefinition"}, 
 				 monochrome=true,
 				 plugin= {"html:Reports\\HtmlReport", "json:Reports\\JsonReport\\cucumber.json", "junit:Reports\\JunitReport\\cucumber.xml"},
-				 dryRun=false,
-				 strict=true
+				 dryRun=false,	//Mapping between feature file and step file
+				 strict=true	//It will check if any step is not defined in the step definition file
 				)
 public class Runner {
 
