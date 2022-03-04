@@ -32,7 +32,7 @@ public class LoginSteps {
 	  
 	}
 
-	@When("^user enters \"(.*)\" and \"(.*)\"$")
+	@When("^user enters (.*) and (.*)$")
 	public void user_enters_username_and_password(String uname, String pswd) {
 		
 		System.out.println("Step2: User enters username and password");
