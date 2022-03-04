@@ -10,6 +10,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+/*
+	Parameterization without Example Keyword
+ 	Regular Expression: 
+	("^user enters \"(.*)\" and \"(.*)\"$")
+	("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
+ */
+
 public class LoginSteps {
 	
 	WebDriver driver;
@@ -25,12 +32,12 @@ public class LoginSteps {
 	  
 	}
 
-	@When("user enters username and password")
-	public void user_enters_username_and_password() {
+	@When("^user enters \"(.*)\" and \"(.*)\"$")
+	public void user_enters_username_and_password(String uname, String pswd) {
 		
 		System.out.println("Step2: User enters username and password");
-		driver.findElement(By.id("txtUsername")).sendKeys("admin");
-		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+		driver.findElement(By.id("txtUsername")).sendKeys(uname);
+		driver.findElement(By.id("txtPassword")).sendKeys(pswd);
 	   
 	}
 
